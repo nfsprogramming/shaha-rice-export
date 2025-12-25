@@ -18,7 +18,7 @@ export const Footer = () => {
                 <span className="cursor-pointer hover:text-[#E1C699]">Instagram</span>
                 <span className="cursor-pointer hover:text-[#E1C699]">WhatsApp</span>
             </div>
-            <p className="text-gray-600 text-xs tracking-widest uppercase">© 2025 Shaha Rice Exports. All Rights Reserved.</p>
+            <p className="text-gray-600 text-xs tracking-widest uppercase">© 2025 Shaha Rice Exports. All Rights Reserved. (v2.0)</p>
         </footer>
     );
 };

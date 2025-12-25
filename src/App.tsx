@@ -9,6 +9,7 @@ import { About } from './pages/About';
 import { Products } from './pages/Products';
 import { Process } from './pages/Process';
 import { Contact } from './pages/Contact';
+import { Terms } from './pages/Terms';
 
 // ScrollToTop component to ensure pages start at the top
 const ScrollToTop = () => {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/process" element={<Process />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </AnimatePresence>
       <Footer />

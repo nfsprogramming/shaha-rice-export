@@ -30,6 +30,7 @@ export const QuoteRequestForm = () => {
     }, [formData.series]);
 
     const handleNext = () => setStep(s => s + 1);
+    const handleBack = () => setStep(s => Math.max(1, s - 1));
 
     // Dynamic steps definition
     const steps = [
@@ -108,9 +109,19 @@ export const QuoteRequestForm = () => {
                             transition={{ duration: 0.4, ease: "easeOut" }}
                             className="w-full"
                         >
-                            <h4 className="text-3xl md:text-4xl font-serif text-white mb-8 leading-tight">
-                                {steps[step - 1].title}
-                            </h4>
+                            <div className="flex items-center justify-between mb-8">
+                                <h4 className="text-3xl md:text-4xl font-serif text-white leading-tight">
+                                    {steps[step - 1].title}
+                                </h4>
+                                {step > 1 && (
+                                    <button
+                                        onClick={handleBack}
+                                        className="text-gray-500 hover:text-[#C5A266] text-xs uppercase tracking-widest transition-colors flex items-center gap-2"
+                                    >
+                                        ← Back
+                                    </button>
+                                )}
+                            </div>
 
                             {steps[step - 1].isInput ? (
                                 <div className="space-y-8">

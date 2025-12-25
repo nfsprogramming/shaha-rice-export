@@ -66,7 +66,7 @@ export const Home = () => {
                             transition={{ delay: 0.5, duration: 0.8 }}
                             className="text-[#C5A266] text-xs md:text-xl font-light tracking-[0.2em] md:tracking-[0.5em] mb-4 uppercase"
                         >
-                            Premium Export Quality (v3.0 Live)
+                            Premium Export Quality
                         </motion.h2>
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}

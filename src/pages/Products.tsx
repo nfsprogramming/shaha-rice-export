@@ -55,7 +55,10 @@ export const Products = () => {
                                             </div>
                                             <div className="p-6 relative z-20 -mt-20">
                                                 <h3 className="text-xl font-serif text-white mb-2 leading-tight">{rice.name}</h3>
-                                                <button className="text-[#E1C699] text-xs uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
+                                                {rice.price && (
+                                                    <p className="text-[#E1C699] font-medium mb-3">{rice.price}</p>
+                                                )}
+                                                <button className="text-white/60 text-xs uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all group-hover:text-white">
                                                     View Specs <span className="w-4 h-[1px] bg-[#E1C699]"></span>
                                                 </button>
                                             </div>

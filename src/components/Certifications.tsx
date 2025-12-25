@@ -6,7 +6,10 @@ const certs = [
     { name: "GMP Standard", id: "GMP", img: "/certificates/gmp.svg" },
     { name: "FSSAI", id: "FSSAI", img: "/certificates/fssai.svg" },
     { name: "FDA Registered", id: "FDA", img: "/certificates/fda.svg" },
-    { name: "Halal Certified", id: "HALAL", img: "/certificates/halal.svg" }
+    { name: "Halal Certified", id: "HALAL", img: "/certificates/halal.svg" },
+    { name: "Kosher Certified", id: "KOSHER", img: "/certificates/kosher.svg" },
+    { name: "REX Registered", id: "REX", img: "/certificates/rex.svg" },
+    { name: "APEDA Member", id: "APEDA", img: "/certificates/apeda.svg" }
 ];
 
 export const Certifications = () => {

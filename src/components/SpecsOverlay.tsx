@@ -122,7 +122,14 @@ export const SpecsOverlay: React.FC<SpecsOverlayProps> = ({ rice, onClose }) => 
                             <button className="flex-1 bg-[#C5A266] hover:bg-white text-black py-4 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300">
                                 Request Export Quote
                             </button>
-                            <button className="px-6 border border-white/10 hover:border-[#C5A266] text-white hover:text-[#C5A266] transition-colors">
+                            <button
+                                className="px-6 border border-white/10 hover:border-[#C5A266] text-white hover:text-[#C5A266] transition-colors"
+                                onClick={() => {
+                                    // In a real app, this would trigger a PDF download
+                                    // For now, we'll simulate it by alerting or logging
+                                    alert(`Downloading spec sheet for ${rice.name}`);
+                                }}
+                            >
                                 <span className="sr-only">Download Spec Sheet</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />

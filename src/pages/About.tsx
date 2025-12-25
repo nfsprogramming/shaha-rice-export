@@ -1,0 +1,83 @@
+
+import { motion } from 'framer-motion';
+
+export const About = () => {
+    return (
+        <div className="min-h-screen bg-[#050505] text-white pt-32 pb-24">
+            {/* Header */}
+            <div className="container mx-auto px-6 mb-16 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Our Introduction</span>
+                    <h1 className="text-4xl md:text-6xl font-serif text-white mt-6 mb-4">Welcome To <br /><span className="text-[#E1C699] italic">Shaha Enterprises</span></h1>
+                    <div className="w-24 h-[1px] bg-[#C5A266] mx-auto my-8 opacity-50"></div>
+                </motion.div>
+            </div>
+
+            {/* Main Content */}
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col md:flex-row gap-16 items-start">
+                    {/* Text Section */}
+                    <div className="md:w-1/2 space-y-8 text-gray-400 font-light leading-relaxed text-lg text-justify">
+                        <motion.p
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <strong className="text-white block mb-2 text-xl font-serif">Established in 2015</strong>
+                            Shaha Enterprises, based in Faridabad, Haryana (India), is a distinguished manufacturer, processor, and exporter of premium-quality agro-products. Our portfolio includes the finest Indian Basmati Rice, Non-Basmati Rice, Wheat, Maize (Corn), Barley, Oats, and a wide range of authentic Indian Spices.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            We are recognized among the top rice exporters in India, delivering authentic Indian grains to buyers across Asia, Europe, Africa, North America, and the Middle East. Our product range includes 1121 Steam Basmati Rice, Traditional Raw, Golden Sella, IR64, PR11, Swarna, and Sona Masoori, all processed using advanced rice milling and packaging technologies.
+                        </motion.p>
+                    </div>
+
+                    {/* Highlight Section / Image Placeholder */}
+                    <div className="md:w-1/2">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="bg-[#111] border border-white/5 p-8 md:p-12 relative overflow-hidden group rounded-sm"
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5A266]/10 rounded-full blur-3xl group-hover:bg-[#C5A266]/20 transition-all duration-700"></div>
+
+                            <h3 className="text-2xl font-serif text-white mb-6">Global Enterprise Solutions</h3>
+                            <p className="text-gray-400 mb-8 leading-relaxed">
+                                At Shaha Enterprises, we specialize in reliable bulk rice export solutions for wholesalers, supermarkets, food distributors, and catering companies.
+                            </p>
+
+                            <ul className="space-y-4 mb-8">
+                                <ListItem text="Private Label Packaging Experts" />
+                                <ListItem text="Flexible Sizing (1kg to 50kg)" />
+                                <ListItem text="Consistent International Supply" />
+                                <ListItem text="Strict Quality Assurance" />
+                            </ul>
+
+                            <div className="py-6 border-t border-white/10 flex items-center justify-between">
+                                <span className="text-[#E1C699] text-xs uppercase tracking-widest">Since 2015</span>
+                                <span className="text-white font-serif italic">Faridabad, India</span>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const ListItem = ({ text }: { text: string }) => (
+    <li className="flex items-center gap-4 text-sm text-gray-300">
+        <span className="w-1.5 h-1.5 bg-[#C5A266] rounded-full"></span>
+        {text}
+    </li>
+);

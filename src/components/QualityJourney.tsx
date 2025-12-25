@@ -46,61 +46,67 @@ export const QualityJourney = () => {
 
     return (
         <section ref={containerRef} className="py-32 bg-[#050505] relative overflow-hidden">
-            <div className="space-y-32 relative">
-                <div className="absolute left-[50%] top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2 hidden md:block" />
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-24">
+                    <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">The Process</span>
+                    <h2 className="text-4xl md:text-6xl font-serif text-white mt-4">Quality <span className="italic text-gray-500">Journey</span></h2>
+                </div>
 
-                {/* Moving progress line */}
-                <motion.div
-                    style={{ scaleY: scrollYProgress }}
-                    className="absolute left-[50%] top-0 bottom-0 w-[2px] bg-[#C5A266] -translate-x-1/2 origin-top hidden md:block"
-                />
-                {steps.map((step, index) => (
+                <div className="space-y-32 relative">
+                    <div className="absolute left-[50%] top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2 hidden md:block" />
+
+                    {/* Moving progress line */}
                     <motion.div
-                        key={step.id}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: "-20% 0px -20% 0px" }}
-                        transition={{ duration: 0.8 }}
-                        className={`flex flex-col md:flex-row items-center gap-12 md:gap-24 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
-                    >
-                        <div className="flex-1 text-center md:text-right">
-                            {index % 2 === 0 ? (
-                                <StepContent step={step} align="right" />
-                            ) : (
-                                <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                                    <img
-                                        src={step.image}
-                                        alt={step.title}
-                                        className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                                    />
-                                </div>
-                            )}
-                        </div>
+                        style={{ scaleY: scrollYProgress }}
+                        className="absolute left-[50%] top-0 bottom-0 w-[2px] bg-[#C5A266] -translate-x-1/2 origin-top hidden md:block"
+                    />
+                    {steps.map((step, index) => (
+                        <motion.div
+                            key={step.id}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ margin: "-20% 0px -20% 0px" }}
+                            transition={{ duration: 0.8 }}
+                            className={`flex flex-col md:flex-row items-center gap-12 md:gap-24 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
+                        >
+                            <div className="flex-1 text-center md:text-right">
+                                {index % 2 === 0 ? (
+                                    <StepContent step={step} align="right" />
+                                ) : (
+                                    <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+                                        <img
+                                            src={step.image}
+                                            alt={step.title}
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                                        />
+                                    </div>
+                                )}
+                            </div>
 
-                        <div className="relative flex items-center justify-center w-12 h-12 shrink-0">
-                            <div className="w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-[#C5A266] z-10" />
-                            <div className="absolute w-12 h-12 rounded-full border border-[#C5A266]/30 animate-ping opacity-20" />
-                        </div>
+                            <div className="relative flex items-center justify-center w-12 h-12 shrink-0">
+                                <div className="w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-[#C5A266] z-10" />
+                                <div className="absolute w-12 h-12 rounded-full border border-[#C5A266]/30 animate-ping opacity-20" />
+                            </div>
 
-                        <div className="flex-1 text-center md:text-left">
-                            {index % 2 !== 0 ? (
-                                <StepContent step={step} align="left" />
-                            ) : (
-                                <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                                    <img
-                                        src={step.image}
-                                        alt={step.title}
-                                        className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                                    />
-                                </div>
-                            )}
-                        </div>
-                    </motion.div>
-                ))}
+                            <div className="flex-1 text-center md:text-left">
+                                {index % 2 !== 0 ? (
+                                    <StepContent step={step} align="left" />
+                                ) : (
+                                    <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+                                        <img
+                                            src={step.image}
+                                            alt={step.title}
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                                        />
+                                    </div>
+                                )}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-        </div>
         </section >
     );
 };

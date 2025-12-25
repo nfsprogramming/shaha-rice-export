@@ -79,7 +79,7 @@ export const About = () => {
                     <StatItem icon="🌾" value="50+" label="Rice Products" />
                     <StatItem icon="🌍" value="25+" label="Exporting Countries" />
                     <StatItem icon="👥" value="500+" label="Satisfied Clients" />
-                    <StatItem icon="⭐" value="4.8" label="Google Review Rating" />
+                    <StatItem icon="⭐" value="5.0" label="Google Review Rating" />
                 </div>
             </div>
         </div>

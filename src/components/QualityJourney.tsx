@@ -9,7 +9,7 @@ const steps = [
         location: "Indo-Gangetic Plains",
         desc: "Procured directly from the fertile foothills of the Himalayas, where the pristine waters and unique climate cultivate grains of unmatched aroma.",
         color: "#C5A266",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1589133469279-3d0783aada60?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "02",
@@ -17,7 +17,7 @@ const steps = [
         location: "Buhler Sortex Facilities",
         desc: "State-of-the-art Japanese and German milling technology ensures every grain is polished to perfection, maintaining nutritional integrity.",
         color: "#E1C699",
-        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1563205764-5d59eb6137d2?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "03",
@@ -25,7 +25,7 @@ const steps = [
         location: "ISO Certified Labs",
         desc: "Rigorous testing protocols for aflatoxin, pesticide residues, and moisture content. Zero compromise on purity standards.",
         color: "#C5A266",
-        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "04",
@@ -33,7 +33,7 @@ const steps = [
         location: "Port to Port",
         desc: "Seamless export network ensuring freshness is locked in from our facility to your destination port anywhere in the world.",
         color: "#E1C699",
-        image: "https://images.unsplash.com/photo-1494412574643-35d3246981d5?q=80&w=1200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop"
     }
 ];
 
@@ -76,7 +76,15 @@ export const QualityJourney = () => {
                                 ) : (
                                     <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                                        <img src={step.image} alt={step.title} className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
+                                        <img
+                                            src={step.image}
+                                            alt={step.title}
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-white/10', 'to-transparent');
+                                            }}
+                                        />
                                     </div>
                                 )}
                             </div>
@@ -92,7 +100,15 @@ export const QualityJourney = () => {
                                 ) : (
                                     <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                                        <img src={step.image} alt={step.title} className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
+                                        <img
+                                            src={step.image}
+                                            alt={step.title}
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                                            onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-white/10', 'to-transparent');
+                                            }}
+                                        />
                                     </div>
                                 )}
                             </div>

@@ -53,9 +53,8 @@ export const QualityJourney = () => {
                 </div>
 
                 <div className="space-y-32 relative">
-                    {/* Line Container with Mask to fade out ends */}
-                    <div className="absolute left-[50%] top-0 bottom-0 w-[2px] -translate-x-1/2 hidden md:block"
-                        style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)' }}>
+                    {/* Line Container */}
+                    <div className="absolute left-[50%] top-0 bottom-0 w-[2px] -translate-x-1/2 hidden md:block">
                         <div className="absolute inset-0 w-[1px] bg-white/10 mx-auto" />
                         <motion.div
                             style={{ scaleY: scrollYProgress }}

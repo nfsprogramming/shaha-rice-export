@@ -16,6 +16,7 @@ export interface RiceVariety {
     desc: string;
     image: string;
     tag: string;
+    price?: string;
     specs: RiceSpecs;
 }
 

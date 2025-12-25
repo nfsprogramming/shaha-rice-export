@@ -13,7 +13,7 @@ export const About = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Our Introduction</span>
-                    <h1 className="text-4xl md:text-6xl font-serif text-white mt-6 mb-4">Welcome To <br /><span className="text-[#E1C699] italic">Shaha Enterprises</span></h1>
+                    <h1 className="text-4xl md:text-6xl font-serif text-white mt-6 mb-4">Welcome To <br /><span className="text-[#E1C699] italic">Shaha Rice Exports</span></h1>
                     <div className="w-24 h-[1px] bg-[#C5A266] mx-auto my-8 opacity-50"></div>
                 </motion.div>
             </div>
@@ -30,7 +30,7 @@ export const About = () => {
                             transition={{ delay: 0.2 }}
                         >
                             <strong className="text-white block mb-2 text-xl font-serif">Established in 2015</strong>
-                            Shaha Enterprises, based in Faridabad, Haryana (India), is a distinguished manufacturer, processor, and exporter of premium-quality agro-products. Our portfolio includes the finest Indian Basmati Rice, Non-Basmati Rice, Wheat, Maize (Corn), Barley, Oats, and a wide range of authentic Indian Spices.
+                            Shaha Rice Exports, based in Faridabad, Haryana (India), is a distinguished manufacturer, processor, and exporter of premium-quality agro-products. Our portfolio includes the finest Indian Basmati Rice, Non-Basmati Rice, Wheat, Maize (Corn), Barley, Oats, and a wide range of authentic Indian Spices.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, x: -20 }}
@@ -54,7 +54,7 @@ export const About = () => {
 
                             <h3 className="text-2xl font-serif text-white mb-6">Global Enterprise Solutions</h3>
                             <p className="text-gray-400 mb-8 leading-relaxed">
-                                At Shaha Enterprises, we specialize in reliable bulk rice export solutions for wholesalers, supermarkets, food distributors, and catering companies.
+                                At Shaha Rice Exports, we specialize in reliable bulk rice export solutions for wholesalers, supermarkets, food distributors, and catering companies.
                             </p>
 
                             <ul className="space-y-4 mb-8">
@@ -92,7 +92,7 @@ export const About = () => {
                     className="text-center mb-16"
                 >
                     <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Why Choose Us</span>
-                    <h2 className="text-3xl md:text-5xl font-serif text-white mt-4">Shaha Enterprises?</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif text-white mt-4">Shaha Rice Exports?</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

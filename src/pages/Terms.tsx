@@ -18,7 +18,7 @@ export const Terms = () => {
 
                 <div className="space-y-12 text-gray-400 font-light leading-relaxed text-lg text-justify">
                     <Section title="1. Introduction">
-                        Welcome to SHAH ENTERPRISES. By accessing or using our services, you agree to be bound by the following terms and conditions. Please read them carefully.
+                        Welcome to SHAHA RICE EXPORTS. By accessing or using our services, you agree to be bound by the following terms and conditions. Please read them carefully.
                     </Section>
 
                     <Section title="2. Products and Services">
@@ -34,7 +34,7 @@ export const Terms = () => {
                     </Section>
 
                     <Section title="5. Communication">
-                        For inquiries or more information on how SHAH ENTERPRISES can assist in your success within the global grain market, please contact us.
+                        For inquiries or more information on how SHAHA RICE EXPORTS can assist in your success within the global grain market, please contact us.
                     </Section>
 
                     <Section title="6. Quality Assurance">
@@ -42,11 +42,11 @@ export const Terms = () => {
                     </Section>
 
                     <Section title="7. Legal Compliance">
-                        All transactions, contracts, and operations of SHAH ENTERPRISES comply with applicable laws and regulations. By engaging with us, you agree to adhere to these terms.
+                        All transactions, contracts, and operations of SHAHA RICE EXPORTS comply with applicable laws and regulations. By engaging with us, you agree to adhere to these terms.
                     </Section>
 
                     <Section title="8. Amendments">
-                        SHAH ENTERPRISES reserves the right to modify these terms and conditions at any time. Changes will be effective upon posting on our website. We encourage you to review this page regularly to stay informed.
+                        SHAHA RICE EXPORTS reserves the right to modify these terms and conditions at any time. Changes will be effective upon posting on our website. We encourage you to review this page regularly to stay informed.
                     </Section>
 
                     <Section title="9. Contact Information">

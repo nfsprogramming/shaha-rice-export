@@ -18,7 +18,7 @@ export const Privacy = () => {
 
                 <div className="space-y-12 text-gray-400 font-light leading-relaxed text-lg text-justify">
                     <Section title="1. Introduction">
-                        At SHAH ENTERPRISES, we prioritize your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, and protect your data when you engage with our products and services.
+                        At SHAHA RICE EXPORTS, we prioritize your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, and protect your data when you engage with our products and services.
                     </Section>
 
                     <Section title="2. Information We Collect">
@@ -34,7 +34,7 @@ export const Privacy = () => {
                     </Section>
 
                     <Section title="5. Sharing of Information">
-                        SHAH ENTERPRISES does not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law or to trusted partners who assist us in operating our business and serving you, under strict confidentiality agreements.
+                        SHAHA RICE EXPORTS does not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law or to trusted partners who assist us in operating our business and serving you, under strict confidentiality agreements.
                     </Section>
 
                     <Section title="6. Global Market Engagement">
@@ -50,7 +50,7 @@ export const Privacy = () => {
                     </Section>
 
                     <Section title="9. Contact Us">
-                        For any questions or concerns regarding our Privacy Policy or the handling of your personal information, please reach out to us at support@shahaenterprises.com.
+                        For any questions or concerns regarding our Privacy Policy or the handling of your personal information, please reach out to us at support@shahariceexports.com.
                     </Section>
 
                     <div className="pt-8 border-t border-white/10 text-sm text-gray-500 italic">

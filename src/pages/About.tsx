@@ -138,6 +138,53 @@ export const About = () => {
                     />
                 </div>
             </div>
+
+            {/* Feedback Form Section */}
+            <div className="container mx-auto px-6 mt-32">
+                <div className="max-w-4xl mx-auto bg-[#111] border border-white/5 p-8 md:p-12 rounded-sm relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#C5A266]/5 rounded-full blur-3xl -z-10"></div>
+
+                    <div className="text-center mb-12">
+                        <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Contact Now</span>
+                        <h2 className="text-3xl md:text-4xl font-serif text-white mt-4">Leave Us a Message</h2>
+                    </div>
+
+                    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-xs text-gray-400 uppercase tracking-wider">Full Name</label>
+                                <input type="text" className="w-full bg-black/50 border border-white/10 p-4 text-white focus:border-[#C5A266] transition-colors outline-none rounded-sm" placeholder="Enter your full name" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs text-gray-400 uppercase tracking-wider">Email Address</label>
+                                <input type="email" className="w-full bg-black/50 border border-white/10 p-4 text-white focus:border-[#C5A266] transition-colors outline-none rounded-sm" placeholder="Enter your email" />
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-xs text-gray-400 uppercase tracking-wider">Phone Number</label>
+                                <input type="tel" className="w-full bg-black/50 border border-white/10 p-4 text-white focus:border-[#C5A266] transition-colors outline-none rounded-sm" placeholder="Enter phone number" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs text-gray-400 uppercase tracking-wider">Subject</label>
+                                <input type="text" className="w-full bg-black/50 border border-white/10 p-4 text-white focus:border-[#C5A266] transition-colors outline-none rounded-sm" placeholder="Enter subject" />
+                            </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-xs text-gray-400 uppercase tracking-wider">Write Message</label>
+                            <textarea className="w-full bg-black/50 border border-white/10 p-4 text-white focus:border-[#C5A266] transition-colors outline-none rounded-sm h-40 resize-none" placeholder="Enter your message here..."></textarea>
+                        </div>
+
+                        <div className="text-center pt-4">
+                            <button className="bg-[#C5A266] text-black px-12 py-4 uppercase tracking-[0.2em] font-medium hover:bg-white transition-colors duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };

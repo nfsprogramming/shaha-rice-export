@@ -53,13 +53,16 @@ export const QualityJourney = () => {
                 </div>
 
                 <div className="space-y-32 relative">
-                    <div className="absolute left-[50%] top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2 hidden md:block" />
+                    {/* Line Container with Mask to fade out ends */}
+                    <div className="absolute left-[50%] top-0 bottom-0 w-[2px] -translate-x-1/2 hidden md:block"
+                        style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)' }}>
+                        <div className="absolute inset-0 w-[1px] bg-white/10 mx-auto" />
+                        <motion.div
+                            style={{ scaleY: scrollYProgress }}
+                            className="absolute top-0 w-[2px] bg-[#C5A266] origin-top h-full"
+                        />
+                    </div>
 
-                    {/* Moving progress line */}
-                    <motion.div
-                        style={{ scaleY: scrollYProgress }}
-                        className="absolute left-[50%] top-0 bottom-0 w-[2px] bg-[#C5A266] -translate-x-1/2 origin-top hidden md:block"
-                    />
                     {steps.map((step, index) => (
                         <motion.div
                             key={step.id}
@@ -107,7 +110,7 @@ export const QualityJourney = () => {
                     ))}
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 

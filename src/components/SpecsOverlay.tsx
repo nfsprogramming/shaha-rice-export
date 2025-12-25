@@ -125,9 +125,47 @@ export const SpecsOverlay: React.FC<SpecsOverlayProps> = ({ rice, onClose }) => 
                             <button
                                 className="px-6 border border-white/10 hover:border-[#C5A266] text-white hover:text-[#C5A266] transition-colors"
                                 onClick={() => {
-                                    // In a real app, this would trigger a PDF download
-                                    // For now, we'll simulate it by alerting or logging
-                                    alert(`Downloading spec sheet for ${rice.name}`);
+                                    // Create content for the spec sheet
+                                    const content = `
+SHAHA RICE EXPORTS - PRODUCT SPECIFICATION SHEET
+------------------------------------------------
+Product: ${rice.name}
+Series: ${rice.series}
+Category: ${rice.category}
+Price: ${rice.price || 'N/A'}
+
+DESCRIPTION
+-----------
+${rice.desc}
+
+TECHNICAL SPECIFICATIONS
+------------------------
+Average Length   : ${rice.specs.length}
+Moisture Content : ${rice.specs.moisture}
+Milling Degree   : ${rice.specs.milling}
+Broken %         : ${rice.specs.broken}
+Purity           : ${rice.specs.purity}
+
+------------------------------------------------
+Contact us for bulk orders and export inquiries.
+www.shaharice.com
+`;
+                                    // Create a Blob from the content
+                                    const blob = new Blob([content], { type: 'text/plain' });
+
+                                    // Create a download link
+                                    const url = window.URL.createObjectURL(blob);
+                                    const link = document.createElement('a');
+                                    link.href = url;
+                                    link.download = `${rice.name.replace(/\s+/g, '-').toLowerCase()}-specs.txt`;
+
+                                    // Trigger download
+                                    document.body.appendChild(link);
+                                    link.click();
+
+                                    // Cleanup
+                                    document.body.removeChild(link);
+                                    window.URL.revokeObjectURL(url);
                                 }}
                             >
                                 <span className="sr-only">Download Spec Sheet</span>

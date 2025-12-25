@@ -1,30 +1,23 @@
 
 
-
 const certs = [
-    { name: "ISO 22000", id: "ISO" },
-    { name: "HACCP Certified", id: "HACCP" },
-    { name: "GMP Standard", id: "GMP" },
-    { name: "FSSAI", id: "FSSAI" },
-    { name: "FDA Registered", id: "FDA" },
-    { name: "Halal Certified", id: "HALAL" }
+    { name: "ISO 22000", id: "ISO", img: "/certificates/iso.svg" },
+    { name: "HACCP Certified", id: "HACCP", img: "/certificates/haccp.svg" },
+    { name: "GMP Standard", id: "GMP", img: "/certificates/gmp.svg" },
+    { name: "FSSAI", id: "FSSAI", img: "/certificates/fssai.svg" },
+    { name: "FDA Registered", id: "FDA", img: "/certificates/fda.svg" },
+    { name: "Halal Certified", id: "HALAL", img: "/certificates/halal.svg" }
 ];
 
 export const Certifications = () => {
     return (
         <div className="w-full bg-[#080808] border-y border-white/5 py-12 overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="flex flex-wrap justify-center md:justify-between gap-8 md:gap-12 items-center opacity-50 hover:opacity-100 transition-opacity duration-500">
+                <div className="flex flex-wrap justify-center md:justify-between gap-8 md:gap-12 items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
                     {certs.map((cert) => (
-                        <div key={cert.id} className="group flex flex-col items-center gap-4 cursor-default">
-                            {/* 
-                  Since we don't have actual SVG logos yet, I'm creating sophisticated 
-                  typographic placeholders that look like certification stamps 
-               */}
-                            <div className="w-24 h-24 rounded-full border-2 border-dashed border-gray-700 group-hover:border-[#C5A266] flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                                <div className="w-20 h-20 rounded-full border border-gray-800 bg-[#0a0a0a] flex items-center justify-center text-center p-2 group-hover:shadow-[0_0_30px_rgba(197,162,102,0.2)] transition-shadow">
-                                    <span className="text-gray-500 font-bold text-xs group-hover:text-white transition-colors">{cert.id}</span>
-                                </div>
+                        <div key={cert.id} className="group flex flex-col items-center gap-4 cursor-pointer">
+                            <div className="w-20 h-20 md:w-24 md:h-24 p-4 border border-white/10 rounded-full bg-white/[0.02] group-hover:bg-[#C5A266]/10 group-hover:border-[#C5A266]/50 transition-all duration-500 flex items-center justify-center">
+                                <img src={cert.img} alt={cert.name} className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_10px_rgba(197,162,102,0.3)]" />
                             </div>
                             <span className="text-[10px] uppercase tracking-widest text-gray-600 group-hover:text-[#C5A266] transition-colors">
                                 {cert.name}

@@ -1,6 +1,5 @@
-
 import { Link, useLocation } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
@@ -16,6 +15,7 @@ export const Navbar = () => {
                     transition={{ duration: 1 }}
                     className="flex items-center gap-3"
                 >
+                    <Home className="w-5 h-5 text-[#E1C699] opacity-80" />
                     <span className="text-sm md:text-2xl font-serif font-bold tracking-widest text-[#E1C699]">SHAHA RICE EXPORTS</span>
                 </motion.div>
             </Link>

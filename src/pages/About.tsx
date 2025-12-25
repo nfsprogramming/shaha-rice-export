@@ -82,9 +82,77 @@ export const About = () => {
                     <StatItem icon="⭐" value="5.0" label="Google Review Rating" />
                 </div>
             </div>
+            {/* Why Choose Us Section */}
+            <div className="container mx-auto px-6 mt-32">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Why Choose Us</span>
+                    <h2 className="text-3xl md:text-5xl font-serif text-white mt-4">Shaha Enterprises?</h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <FeatureCard
+                        icon="✅"
+                        title="Certified Exporters"
+                        desc="ISO 9001:2015, FSSAI, HACCP, and GMP certified production and supply."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Diverse Portfolio"
+                        desc="Exporting IR64, Swarna, Sona Masoori, and Parboiled rice varieties in bulk."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Global Reach"
+                        desc="Trusted by importers across the USA, UAE, Europe, Africa, and the UK."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Custom Packaging"
+                        desc="Flexible options from 1kg to 50kg, available for retail, wholesale, and private label."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Pesticide Free"
+                        desc="100% Pesticide Residue-Free Rice – Fully compliant with EU and US standards."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Modern Infrastructure"
+                        desc="Equipped with advanced grading, sortex, and hygienic packaging machinery."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Quality Assurance"
+                        desc="Continuous quality checks through dedicated in-house labs and testing units."
+                    />
+                    <FeatureCard
+                        icon="✅"
+                        title="Reliable Logistics"
+                        desc="Fast turnaround time and assured on-time international deliveries."
+                    />
+                </div>
+            </div>
         </div>
     );
 };
+
+const FeatureCard = ({ icon, title, desc }: { icon: string, title: string, desc: string }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="bg-[#111] border border-white/5 p-8 hover:border-[#C5A266]/30 transition-all duration-300 group"
+    >
+        <span className="text-2xl mb-4 block group-hover:scale-110 transition-transform duration-300">{icon}</span>
+        <h3 className="text-xl font-serif text-white mb-3 group-hover:text-[#C5A266] transition-colors">{title}</h3>
+        <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+    </motion.div>
+);
 
 const StatItem = ({ icon, value, label }: { icon: string, value: string, label: string }) => (
     <div className="flex flex-col items-center gap-2 group cursor-default">

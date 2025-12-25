@@ -99,7 +99,35 @@ export const Prices = () => {
                 </div>
 
                 <div className="mt-12 text-center">
-                    <button className="inline-flex items-center gap-2 bg-[#C5A266] text-black px-8 py-3 rounded-sm uppercase tracking-widest text-xs font-bold hover:bg-white transition-colors duration-300">
+                    <button
+                        className="inline-flex items-center gap-2 bg-[#C5A266] text-black px-8 py-3 rounded-sm uppercase tracking-widest text-xs font-bold hover:bg-white transition-colors duration-300"
+                        onClick={() => {
+                            const date = new Date().toLocaleDateString();
+                            let content = `SHAHA RICE EXPORTS - LIVE PRICE LIST (${date})\n`;
+                            content += "=================================================================================\n";
+                            content += "Variety                               | Form        | Length   | Price (FOB)\n";
+                            content += "---------------------------------------------------------------------------------\n";
+
+                            prices.forEach(p => {
+                                content += `${p.variety.padEnd(38)}| ${p.form.padEnd(12)}| ${p.length.padEnd(9)}| ${p.price}\n`;
+                            });
+
+                            content += "=================================================================================\n\n";
+                            content += "Note: Prices are subject to market fluctuations. Valid for current week.\n";
+                            content += "Contact: support@shahariceexports.com\n";
+                            content += "Website: www.shahariceexports.com";
+
+                            const blob = new Blob([content], { type: 'text/plain' });
+                            const url = window.URL.createObjectURL(blob);
+                            const link = document.createElement('a');
+                            link.href = url;
+                            link.download = `shaha-rice-prices-${new Date().toISOString().split('T')[0]}.txt`;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            window.URL.revokeObjectURL(url);
+                        }}
+                    >
                         <Download size={16} />
                         Download Price List
                     </button>

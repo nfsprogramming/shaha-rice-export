@@ -9,7 +9,7 @@ const steps = [
         location: "Indo-Gangetic Plains",
         desc: "Procured directly from the fertile foothills of the Himalayas, where the pristine waters and unique climate cultivate grains of unmatched aroma.",
         color: "#C5A266",
-        image: "https://images.unsplash.com/photo-1589133469279-3d0783aada60?q=80&w=1200&auto=format&fit=crop"
+        image: "/images/process/sourcing.jpg"
     },
     {
         id: "02",
@@ -17,7 +17,7 @@ const steps = [
         location: "Buhler Sortex Facilities",
         desc: "State-of-the-art Japanese and German milling technology ensures every grain is polished to perfection, maintaining nutritional integrity.",
         color: "#E1C699",
-        image: "https://images.unsplash.com/photo-1563205764-5d59eb6137d2?q=80&w=1200&auto=format&fit=crop"
+        image: "/images/process/milling.jpg"
     },
     {
         id: "03",
@@ -25,7 +25,7 @@ const steps = [
         location: "ISO Certified Labs",
         desc: "Rigorous testing protocols for aflatoxin, pesticide residues, and moisture content. Zero compromise on purity standards.",
         color: "#C5A266",
-        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop"
+        image: "/images/process/quality.jpg"
     },
     {
         id: "04",
@@ -33,7 +33,7 @@ const steps = [
         location: "Port to Port",
         desc: "Seamless export network ensuring freshness is locked in from our facility to your destination port anywhere in the world.",
         color: "#E1C699",
-        image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop"
+        image: "/images/process/logistics.jpg"
     }
 ];
 

@@ -12,6 +12,7 @@ import { Contact } from './pages/Contact';
 import { Terms } from './pages/Terms';
 import { Privacy } from './pages/Privacy';
 import { Prices } from './pages/Prices';
+import { Blog } from './pages/Blog';
 
 // ScrollToTop component to ensure pages start at the top
 const ScrollToTop = () => {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/process" element={<Process />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/prices" element={<Prices />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
         </Routes>

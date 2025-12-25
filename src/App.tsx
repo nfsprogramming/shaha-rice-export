@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import { About } from './pages/About';
 import { Products } from './pages/Products';
 import { Process } from './pages/Process';
 import { Contact } from './pages/Contact';
@@ -30,6 +31,7 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/process" element={<Process />} />
           <Route path="/contact" element={<Contact />} />

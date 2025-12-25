@@ -1,0 +1,31 @@
+
+import { Link, useLocation } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+export const Navbar = () => {
+    const location = useLocation();
+
+
+    return (
+        <nav className="absolute top-0 w-full z-50 px-4 md:px-8 py-4 flex justify-between items-center mix-blend-difference">
+            <Link to="/">
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                    className="flex items-center gap-3"
+                >
+                    <span className="text-sm md:text-2xl font-serif font-bold tracking-widest text-[#E1C699]">SHAHA RICE EXPORTS</span>
+                </motion.div>
+            </Link>
+
+            <div className="flex items-center gap-8 text-white/80">
+                <Link to="/products" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/products' ? 'text-[#C5A266]' : ''}`}>Collection</Link>
+                <Link to="/process" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/process' ? 'text-[#C5A266]' : ''}`}>Process</Link>
+                <Link to="/contact" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/contact' ? 'text-[#C5A266]' : ''}`}>Enquiry</Link>
+                <Menu className="w-6 h-6 cursor-pointer hover:text-[#C5A266] transition-colors" />
+            </div>
+        </nav>
+    );
+};

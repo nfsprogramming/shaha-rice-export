@@ -8,6 +8,7 @@ export const Footer = () => {
                 <Link to="/about" className="cursor-pointer hover:text-[#E1C699]">About</Link>
                 <Link to="/products" className="cursor-pointer hover:text-[#E1C699]">Collection</Link>
                 <Link to="/process" className="cursor-pointer hover:text-[#E1C699]">Process</Link>
+                <Link to="/prices" className="cursor-pointer hover:text-[#E1C699]">Prices</Link>
                 <Link to="/contact" className="cursor-pointer hover:text-[#E1C699]">Contact</Link>
                 <Link to="/terms" className="cursor-pointer hover:text-[#E1C699]">Terms & Conditions</Link>
                 <Link to="/privacy" className="cursor-pointer hover:text-[#E1C699]">Privacy Policy</Link>

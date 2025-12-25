@@ -71,9 +71,29 @@ export const About = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Statistics Section */}
+            <div className="mt-32 border-t border-white/5 pt-16">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                    <StatItem icon="🏆" value="20+" label="Experience" />
+                    <StatItem icon="🌾" value="50+" label="Rice Products" />
+                    <StatItem icon="🌍" value="25+" label="Exporting Countries" />
+                    <StatItem icon="👥" value="500+" label="Satisfied Clients" />
+                    <StatItem icon="⭐" value="4.8" label="Google Review Rating" />
+                </div>
+            </div>
         </div>
+        </div >
     );
 };
+
+const StatItem = ({ icon, value, label }: { icon: string, value: string, label: string }) => (
+    <div className="flex flex-col items-center gap-2 group cursor-default">
+        <span className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300 filter grayscale group-hover:grayscale-0">{icon}</span>
+        <span className="text-3xl font-serif text-[#E1C699]">{value}</span>
+        <span className="text-gray-500 text-[10px] uppercase tracking-widest group-hover:text-white transition-colors">{label}</span>
+    </div>
+);
 
 const ListItem = ({ text }: { text: string }) => (
     <li className="flex items-center gap-4 text-sm text-gray-300">

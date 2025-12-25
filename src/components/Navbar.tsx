@@ -22,6 +22,7 @@ export const Navbar = () => {
 
             <div className="flex items-center gap-8 text-white/80">
                 <Link to="/about" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/about' ? 'text-[#C5A266]' : ''}`}>About</Link>
+                <Link to="/about" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/about' ? 'text-[#C5A266]' : ''}`}>About</Link>
                 <Link to="/products" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/products' ? 'text-[#C5A266]' : ''}`}>Collection</Link>
                 <Link to="/process" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/process' ? 'text-[#C5A266]' : ''}`}>Process</Link>
                 <Link to="/contact" className={`hidden md:block uppercase text-xs tracking-[0.2em] hover:text-[#C5A266] transition-colors ${location.pathname === '/contact' ? 'text-[#C5A266]' : ''}`}>Enquiry</Link>

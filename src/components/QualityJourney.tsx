@@ -80,10 +80,6 @@ export const QualityJourney = () => {
                                             src={step.image}
                                             alt={step.title}
                                             className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                                            onError={(e) => {
-                                                e.currentTarget.style.display = 'none';
-                                                e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-white/10', 'to-transparent');
-                                            }}
                                         />
                                     </div>
                                 )}
@@ -104,10 +100,6 @@ export const QualityJourney = () => {
                                             src={step.image}
                                             alt={step.title}
                                             className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                                            onError={(e) => {
-                                                e.currentTarget.style.display = 'none';
-                                                e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-white/10', 'to-transparent');
-                                            }}
                                         />
                                     </div>
                                 )}

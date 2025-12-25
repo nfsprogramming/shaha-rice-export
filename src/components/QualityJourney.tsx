@@ -8,28 +8,32 @@ const steps = [
         title: "Sourcing",
         location: "Indo-Gangetic Plains",
         desc: "Procured directly from the fertile foothills of the Himalayas, where the pristine waters and unique climate cultivate grains of unmatched aroma.",
-        color: "#C5A266"
+        color: "#C5A266",
+        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "02",
         title: "Milling",
         location: "Buhler Sortex Facilities",
         desc: "State-of-the-art Japanese and German milling technology ensures every grain is polished to perfection, maintaining nutritional integrity.",
-        color: "#E1C699"
+        color: "#E1C699",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "03",
         title: "Quality Control",
         location: "ISO Certified Labs",
         desc: "Rigorous testing protocols for aflatoxin, pesticide residues, and moisture content. Zero compromise on purity standards.",
-        color: "#C5A266"
+        color: "#C5A266",
+        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: "04",
         title: "Global Logistics",
         location: "Port to Port",
         desc: "Seamless export network ensuring freshness is locked in from our facility to your destination port anywhere in the world.",
-        color: "#E1C699"
+        color: "#E1C699",
+        image: "https://images.unsplash.com/photo-1494412574643-35d3246981d5?q=80&w=1200&auto=format&fit=crop"
     }
 ];
 
@@ -71,8 +75,8 @@ export const QualityJourney = () => {
                                     <StepContent step={step} align="right" />
                                 ) : (
                                     <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
-                                        {/* Placeholder for process image */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+                                        <img src={step.image} alt={step.title} className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
                                     </div>
                                 )}
                             </div>
@@ -87,8 +91,8 @@ export const QualityJourney = () => {
                                     <StepContent step={step} align="left" />
                                 ) : (
                                     <div className="hidden md:block w-full h-[300px] bg-white/[0.03] border border-white/5 relative overflow-hidden group">
-                                        {/* Placeholder for process image */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+                                        <img src={step.image} alt={step.title} className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
                                     </div>
                                 )}
                             </div>

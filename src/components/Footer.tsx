@@ -10,6 +10,7 @@ export const Footer = () => {
                 <Link to="/process" className="cursor-pointer hover:text-[#E1C699]">Process</Link>
                 <Link to="/contact" className="cursor-pointer hover:text-[#E1C699]">Contact</Link>
                 <Link to="/terms" className="cursor-pointer hover:text-[#E1C699]">Terms & Conditions</Link>
+                <Link to="/privacy" className="cursor-pointer hover:text-[#E1C699]">Privacy Policy</Link>
             </div>
             <div className="flex justify-center gap-6 mb-8 text-gray-500">
                 <span className="cursor-pointer hover:text-[#E1C699]">LinkedIn</span>

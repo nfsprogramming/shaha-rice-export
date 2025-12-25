@@ -15,7 +15,7 @@ export const Products = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center md:text-left"
                 >
-                    <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Our Collection</span>
+                    <span className="text-[#C5A266] uppercase tracking-[0.3em] text-xs">Our Products</span>
                     <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 mt-4">Indian <span className="text-[#E1C699] italic">Varieties</span></h2>
                     <p className="text-gray-500 max-w-xl leading-relaxed">
                         Discover the heritage of Indian agriculture through our curated selection of the finest grains.

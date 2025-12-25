@@ -82,7 +82,7 @@ export const Home = () => {
                         <div className="flex flex-col md:flex-row gap-6 justify-center md:justify-start items-center">
                             <Link to="/products">
                                 <button className="px-8 py-3 border border-[#E1C699]/30 bg-[#E1C699]/10 hover:bg-[#E1C699]/20 backdrop-blur-sm text-xs uppercase tracking-[0.25em] text-[#E1C699] transition-all">
-                                    Our Collections
+                                    Our Products
                                 </button>
                             </Link>
                             <Link to="/contact">

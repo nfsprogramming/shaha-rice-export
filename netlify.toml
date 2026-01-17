@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[server]
+  force_ssl = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
